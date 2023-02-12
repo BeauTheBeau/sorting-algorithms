@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Algorithm</title>
+
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+<h1>Sorting Algorithms</h1>
+<h2>Learn</h2>
+
+<div class="row">
+
+    <details open>
+        <summary>Insertion Sort</summary>
+        <p>Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.</p>
+    </details>
+
+    <details open>
+        <summary>Bubble Sort</summary>
+        <p>Bubble sort is a simple sorting algorithm that works the way we sort playing cards in our hands.</p>
+    </details>
+
+    <details open>
+        <summary>Selection Sort</summary>
+        <p>Selection sort is a simple sorting algorithm that works the way we sort playing cards in our hands.</p>
+    </details>
+
+    <details open>
+        <summary>Quick Sort</summary>
+        <p>Quick sort is a simple sorting algorithm that works the way we sort playing cards in our hands.</p>
+    </details>
+
+</div>
+
+<hr>
+
+<h2>Statistics</h2>
+
+<!-- 3 values for each algorithm
+    1. Total time taken
+    2. Total runs
+    3. Average time taken
+-->
+
+<div class="row">
+    <div class="stat">
+        <h3>Insertion Sort</h3>
+        <p>Total time taken: <span id="insertion__total__time">0</span> s</p>
+        <p>Total runs: <span id="insertion__total__runs">0</span></p>
+        <p>Average time taken: <span id="insertion__average__time">0</span> s</p>
+    </div>
+
+    <div class="stat">
+        <h3>Bubble Sort</h3>
+        <p>Total time taken: <span id="bubble__total__time">0</span> s</p>
+        <p>Total runs: <span id="bubble__total__runs">0</span></p>
+        <p>Average time taken: <span id="bubble__average__time">0</span> s</p>
+    </div>
+
+    <div class="stat">
+        <h3>Selection Sort</h3>
+        <p>Total time taken: <span id="selection__total__time">0</span> s</p>
+        <p>Total runs: <span id="selection__total__runs">0</span></p>
+        <p>Average time taken: <span id="selection__average__time">0</span> s</p>
+    </div>
+
+<!--    <div class="stat">-->
+<!--        <h3>Quick Sort</h3>-->
+<!--        <p>Total time taken: <span id="quick__total__time">0</span> s</p>-->
+<!--        <p>Total runs: <span id="quick__total__runs">0</span></p>-->
+<!--        <p>Average time taken: <span id="quick__average__time">0</span> s</p>-->
+<!--    </div>-->
+</div>
+
+<hr>
+
+<h2>See in action</h2>
+<h3>Choose a sorting algorithm</h3>
+
+<div class="pill__container">
+    <div class="pill active" data-algorithm="insertion">Insertion Sort</div>
+    <div class="pill" data-algorithm="bubble">Bubble Sort</div>
+    <div class="pill" data-algorithm="selection">Selection Sort</div>
+    <!--    <div class="pill" data-algorithm="quick">Quick Sort</div>-->
+</div>
+
+<h3>Enter data set</h3>
+<label for="array"></label><textarea id="array" placeholder="5, 23, 1, 76, 53"></textarea>
+<div class="row">
+    <div class="pill" id="sort">Sort</div>
+    <div class="pill" id="generate">Generate 20,000 Random Numbers</div>
+</div>
+
+<hr>
+
+<details open>
+    <summary>Output</summary>
+
+    <div id="output"></div>
+</details>
+
+
+<script src="js/main.js" type="module"></script>
+
+
+</body>
+</html>

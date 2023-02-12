@@ -1,0 +1,101 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+br, hr {
+  margin: 1em 0 !important;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  padding: 1em;
+}
+
+
+.pill__container {
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+  .pill {
+    padding: 10px 20px;
+    background: #2d2d2d;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      background: #707070;
+    }
+
+    &:hover {
+      background: #707070;
+    }
+  }
+
+details {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: #2d2d2d;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+
+  &[open] {
+    background: #707070;
+  }
+
+  &:hover {
+    background: #707070;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 20px 0;
+
+  details {
+    flex: 1;
+    min-width: 256px;
+    max-width: 256px;
+  }
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background: #2d2d2d;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+#output div {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #2d2d2d;
+    border-radius: 20px;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: #707070;
+    }
+}
