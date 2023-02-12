@@ -12,8 +12,6 @@ function insertionSort(array) {
         sortedArray.splice(j + 1, 0, array[i]);
     }
 
-    sortedArray = sortedArray.join(', ');
-
     const end = performance.now();
 
     return [sortedArray, (end - start) / 1000];

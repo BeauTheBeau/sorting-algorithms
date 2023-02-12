@@ -1,3 +1,5 @@
+
+
 import insertionSort from './insertion.js';
 import bubbleSort from './bubble.js';
 import selectionSort from './selection.js';
@@ -31,16 +33,19 @@ const elements = {
     }
 }
 
-let algorithm = "insertion"
-let runs = -1;
-
-let stats = {
+let algorithm = "insertion",
+    runs = -1,
+    stats = {
     // Array - total time, total runs, average time
     "insertion": [0, 0, 0],
     "bubble": [0, 0, 0],
     "selection": [0, 0, 0],
     "quick": [0, 0, 0]
-}
+};
+
+
+
+
 
 // When a sort pill is clicked, change the active pill
 elements["sort-pills"].forEach(pill => {
@@ -77,13 +82,13 @@ elements["sort-btn"].addEventListener('click', () => {
 
     function displayResults(array, time, algorithm) {
 
-        // Createa a new div with id of run-1, run-2, etc. and append it to the output div
+        // Create a new div with id of run-1, run-2, etc. and append it to the output div
         const div = document.createElement('div');
         div.classList.add('run');
         div.setAttribute('id', `run-${runs + 1}`);
         elements["output"].appendChild(div);
 
-        // Createa a h2 element and append it to the run div
+        // Create a h2 element and append it to the run div
         const h2 = document.createElement('h2');
         h2.innerHTML = `Run ${runs + 1} - ${algorithm}`;
         div.appendChild(h2);
@@ -109,6 +114,10 @@ elements["sort-btn"].addEventListener('click', () => {
         elements[algorithm]["total-time"].innerHTML = stats[algorithm][0].toFixed(2);
         elements[algorithm]["total-runs"].innerHTML = stats[algorithm][1];
         elements[algorithm]["average-time"].innerHTML = stats[algorithm][2];
+        
+        // Update the chart
+        draw(stats);
+        
     }
 
     runs += 1;

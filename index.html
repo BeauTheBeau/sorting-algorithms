@@ -5,11 +5,46 @@
     <title>Sorting Algorithm</title>
 
     <meta
-    content="A collection of sorting algorithms with statistics to assess their performance in a very scientific way."
-    name="description">
+            content="A collection of sorting algorithms with statistics to assess their performance in a very scientific way."
+            name="description">
 
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(draw);
 
+        function draw(stats) {
+
+            console.log(stats);
+
+
+
+            const data = google.visualization.arrayToDataTable([
+                ['Algorithm', 'Average Time (s) - Lower is better'],
+                ['Insertion', /* cast to float */ parseFloat(stats["insertion"][2])],
+                ['Bubble', parseFloat(stats["bubble"][2])],
+                ['Selection', parseFloat(stats["selection"][2])],
+            ]);
+
+            const options = {
+                title: 'Average Time Taken by Sorting Algorithms',
+                legend: {position: 'none'},
+                chartArea: {width: '50%'},
+                hAxis: {
+                    title: 'Average Time (s) - Lower is better',
+                    minValue: 0
+                },
+                vAxis: {
+                    title: 'Algorithm'
+                }
+            }
+
+            const chart = new google.visualization.BarChart(document.getElementById('chart'));
+            chart.draw(data, options);
+        }
+
+    </script>
 </head>
 <body>
 
@@ -75,13 +110,16 @@
         <p>Average time taken: <span id="selection__average__time">0</span> s</p>
     </div>
 
-<!--    <div class="stat">-->
-<!--        <h3>Quick Sort</h3>-->
-<!--        <p>Total time taken: <span id="quick__total__time">0</span> s</p>-->
-<!--        <p>Total runs: <span id="quick__total__runs">0</span></p>-->
-<!--        <p>Average time taken: <span id="quick__average__time">0</span> s</p>-->
-<!--    </div>-->
+    <!--    <div class="stat">-->
+    <!--        <h3>Quick Sort</h3>-->
+    <!--        <p>Total time taken: <span id="quick__total__time">0</span> s</p>-->
+    <!--        <p>Total runs: <span id="quick__total__runs">0</span></p>-->
+    <!--        <p>Average time taken: <span id="quick__average__time">0</span> s</p>-->
+    <!--    </div>-->
 </div>
+
+<div id="chart" style="max-width:700px; height:400px"></div>
+
 
 <hr>
 
@@ -110,9 +148,7 @@
     <div id="output"></div>
 </details>
 
-
 <script src="js/main.js" type="module"></script>
-
 
 </body>
 </html>
